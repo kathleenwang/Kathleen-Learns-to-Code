@@ -9,7 +9,12 @@
     <meta name="author" content="">
     <link rel="icon" href="http://getbootstrap.com/favicon.ico">
 
-    <title>Sticky Footer Navbar Template for Bootstrap</title>
+    <title>Day 2: Drawing Canvas</title>
+    <style>
+    	#container{ position: relative;}
+    	#imageView{ border: 1px 
+    		solid #000;}
+    </style>
 
     <!-- Bootstrap core CSS -->
     <link href="./stylesheets/bootstrap.min.css" rel="stylesheet">
@@ -22,58 +27,98 @@
 
   </head>
 
-  <body>
 
-    <!-- Fixed navbar -->
+
+  <body>
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
           <a class="navbar-brand" href="http://kathleenwang.github.io/Kathleen-Learns-to-Code/">Home</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <!--
-            <li class="active"><a href="http://getbootstrap.com/examples/sticky-footer-navbar/#">Home</a></li>
-            <li><a href="http://getbootstrap.com/examples/sticky-footer-navbar/#about">About</a></li>
-            <li><a href="http://getbootstrap.com/examples/sticky-footer-navbar/#contact">Contact</a></li>
-            <li class="dropdown">
-              <a href="http://getbootstrap.com/examples/sticky-footer-navbar/#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="http://getbootstrap.com/examples/sticky-footer-navbar/#">Action</a></li>
-                <li><a href="http://getbootstrap.com/examples/sticky-footer-navbar/#">Another action</a></li>
-                <li><a href="http://getbootstrap.com/examples/sticky-footer-navbar/#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="http://getbootstrap.com/examples/sticky-footer-navbar/#">Separated link</a></li>
-                <li><a href="http://getbootstrap.com/examples/sticky-footer-navbar/#">One more separated link</a></li>
-              </ul>
-            </li>
-          -->
           </ul>
-        </div><!--/.nav-collapse -->
+        </div>
       </div>
     </nav>
 
-    <!-- Begin page content -->
+  <!-- Begin page content -->  
+
     <div class="container">
       <div class="page-header">
-        <h1>Sticky footer with fixed navbar</h1>
+        <h1>Draw something</h1>
       </div>
-      <p class="lead">Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with <code>padding-top: 60px;</code> on the <code>body &gt; .container</code>.</p>
-      <p>Back to <a href="http://getbootstrap.com/examples/sticky-footer">the default sticky footer</a> minus the navbar.</p>
-    </div>
+     
+    <div class="container">
 
-    <footer class="footer">
-      <div class="container">
-        <p class="text-muted">Place sticky footer content here.</p>
-      </div>
-    </footer>
+  		<canvas id="myCanvas" width="400" height="300" style="border:1px solid #000000;">
+  				<p>Unfortunately, your browser is currently unsupported by this web application. Supported browsers: Opera, Firefox, Safari, Konquer, or Chrome. </p>
+  		</canvas>
+  		<script type="text/javascript">
+  		var canvas,ctx,flag=false,
+  			prevX=0,
+  			currX=0,
+  			prevY=0,
+  			currY=0,
+  			dot_flag=false;
+  		var x="black",
+  			y=2;
+  		function init() {
+  			canvas=document.getElementById('myCanvas');
+  			ctx=canvas.getContext("2d");
+  			w=canvas.width;
+  			h=canvas.height;
+
+  			canvas.addEventListener("mousemove",function (e) {
+  				findxy('move',e)
+  			},false);
+  			canvas.addEventListener("mousedown",function (e) {
+  				findxy('down',e)
+  			},false);
+  			canvas.addEventListener("mouseup", function (e) {
+        		findxy('up', e)
+    		}, false);
+    		canvas.addEventListener("mouseout", function (e) {
+        		findxy('out', e)
+    		}, false);
+  			}
+  		
+
+  	</div>
+  		
+
+<!--
+      function init () {
+      canvas.addEventListener('mousemove',ev_mousemove,false);
+
+      }
+
+      var started=false;
+      function ev_mousemove (ev){
+      var x,y;
+
+      if (ev.layerX||ev.layerX ==0) {
+
+      	x=ev.layerX;
+      	y=ev.layerY;
+      } else if (ev.offsetX||ev.offsetX==0) {
+      x=ev.offsetX;
+      y=ev.offsetY;
+      }
+
+      if (!started) {
+      	context.beginPath();
+      	context.moveTo(x,y);
+      	started=true;
+      } else{
+      	context.lineTo(x,y);
+      	context.stroke();
+      }
+
+
+      }
+-->
+
 
 
     <!-- Bootstrap core JavaScript
