@@ -51,7 +51,7 @@
      
     <div class="container">
 
-  		<canvas id="myCanvas" width="400" height="300" style="position:absolute; top: 200px; border:1px solid #000000;">
+  		<canvas id="myCanvas" width="700" height="500" style="position:absolute; top: 200px; border:1px solid #000000;">
   				<p>Unfortunately, your browser is currently unsupported by this web application. Supported browsers: Opera, Firefox, Safari, Konquer, or Chrome. </p>
   		</canvas>
 
@@ -109,7 +109,7 @@
   					break;
   			}
   			if (x=="white") y=14;
-  			else y=2;
+  			else y=3;
   		}
 
   		function draw() {
@@ -161,7 +161,7 @@
 		</script>
 
 <body onload="init()">
-    <!--<canvas id="can" width="400" height="400" style="position:absolute;top:10%;left:10%;border:2px solid;"></canvas>-->
+
     <div style="position:absolute;top:30%;left:70%;">Choose Color</div>
     <div style="position:absolute;top:35%;left:70%;width:20px;height:20px;background:green;" id="green" onclick="color(this)"></div>
     <div style="position:absolute;top:35%;left:75%;width:20px;height:20px;background:blue;" id="blue" onclick="color(this)"></div>
@@ -176,40 +176,6 @@
 
 
   	</div>
-  		
-
-<!--
-      function init () {
-      canvas.addEventListener('mousemove',ev_mousemove,false);
-
-      }
-
-      var started=false;
-      function ev_mousemove (ev){
-      var x,y;
-
-      if (ev.layerX||ev.layerX ==0) {
-
-      	x=ev.layerX;
-      	y=ev.layerY;
-      } else if (ev.offsetX||ev.offsetX==0) {
-      x=ev.offsetX;
-      y=ev.offsetY;
-      }
-
-      if (!started) {
-      	context.beginPath();
-      	context.moveTo(x,y);
-      	started=true;
-      } else{
-      	context.lineTo(x,y);
-      	context.stroke();
-      }
-
-
-      }
--->
-
 
 
     <!-- Bootstrap core JavaScript
