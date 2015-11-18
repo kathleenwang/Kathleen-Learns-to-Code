@@ -2,36 +2,25 @@
 <html>
 	<head>
 		<title> make the flower wiggle faster </title>
+		<link rel="stylesheet" href="stylesheets/day3.css">
+
 		<script type="text/javascript">
-		
+			var mirror = false;
+
 			function nextImage(){
-				x = (x === images.length - 1) ? 0 : x + 1;
-				document.getElementById("img").src=images[x];
+				if (mirror) {
+					document.getElementById("img").className = "mirrored";
+				} else {
+					document.getElementById("img").className = "default";
+				}
+
+				// Toggle
+				mirror = !mirror;
 			}
-			function previousImage() {
-				x = (x <=0) ? images.length - 1: x - 1;
-				document.getElementById("img").src=images[x];
-			}
+
 			function startTimer() {
 				setInterval(nextImage,1000);
 			}
-			var images= [], x= -1;
-<!--original image-->
-			images[0]="https://41.media.tumblr.com/510ef310d7a6d537e70a1dfdd2906a72/tumblr_nxztotuPKi1um4105o1_400.png";
-
-<!--flipped image-->
-
-				<img style='border:0';
-<!--display:inline-block;-->
-				transform:scale(-1,1); <!--transform:scale(x-axis,y-axis)-->
-				-webkit-transform:scale(-1,1);
-				-moz-transform:scale(-1,1);
-				-o-transform:scale(-1,1);
-				src="https://41.media.tumblr.com/510ef310d7a6d537e70a1dfdd2906a72/tumblr_nxztotuPKi1um4105o1_400.png" />;
-
-			images[1]="";
-
-
 		</script>
 	</head>
 
