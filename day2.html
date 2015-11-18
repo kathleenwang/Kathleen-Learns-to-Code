@@ -51,9 +51,10 @@
      
     <div class="container">
 
-  		<canvas id="myCanvas" width="400" height="300" style="border:1px solid #000000;">
+  		<canvas id="myCanvas" width="400" height="300" style="position:absolute; top: 200px; border:1px solid #000000;">
   				<p>Unfortunately, your browser is currently unsupported by this web application. Supported browsers: Opera, Firefox, Safari, Konquer, or Chrome. </p>
   		</canvas>
+
   		<script type="text/javascript">
   		var canvas,ctx,flag=false,
   			prevX=0,
@@ -81,8 +82,98 @@
     		canvas.addEventListener("mouseout", function (e) {
         		findxy('out', e)
     		}, false);
-  			}
+  		}
   		
+  		function color(obj) {
+  			switch (obj.id) {
+  				case "green":
+  					x="green";
+  					break;
+  				case "blue":
+  					x="blue";
+  					break;
+  				case "red":
+  					x="red";
+  					break;
+  				case "yellow":
+  					x="yellow";
+  					break;
+  				case "orange":
+  					x="orange";
+  					break;
+  				case "black":
+  					x="black";
+  					break;
+  				case "white":
+  					x="white";
+  					break;
+  			}
+  			if (x=="white") y=14;
+  			else y=2;
+  		}
+
+  		function draw() {
+  			ctx.beginPath();
+  			ctx.moveTo(prevX, prevY);
+  			ctx.lineTo(currX, currY);
+  			ctx.strokeStyle=x;
+  			ctx.lineWidth=y;
+  			ctx.stroke();
+  			ctx.closePath();
+  		}
+
+  		function erase() {
+    		var m = confirm("Are you sure you want to clear your beautiful artwork?");
+    		if (m) {
+       	 		ctx.clearRect(0, 0, w, h);
+    		}
+		}
+		function findxy(res, e) {
+    		if (res == 'down') {
+        		prevX = currX;
+       			prevY = currY;
+        		currX = e.clientX - canvas.offsetLeft;
+        		currY = e.clientY - canvas.offsetTop;
+
+        		flag = true;
+        		dot_flag = true;
+        		if (dot_flag) {
+            		ctx.beginPath();
+            		ctx.fillStyle = x;
+            		ctx.fillRect(currX, currY, 2, 2);
+            		ctx.closePath();
+            		dot_flag = false;
+        		}
+    		}
+    		if (res == 'up' || res == "out") {
+        		flag = false;
+    		}
+    		if (res == 'move') {
+        		if (flag) {
+            		prevX = currX;
+            		prevY = currY;
+            		currX = e.clientX - canvas.offsetLeft;
+            		currY = e.clientY - canvas.offsetTop;
+            		draw();
+        		}
+    		}
+		}
+		</script>
+
+<body onload="init()">
+    <!--<canvas id="can" width="400" height="400" style="position:absolute;top:10%;left:10%;border:2px solid;"></canvas>-->
+    <div style="position:absolute;top:30%;left:70%;">Choose Color</div>
+    <div style="position:absolute;top:35%;left:70%;width:20px;height:20px;background:green;" id="green" onclick="color(this)"></div>
+    <div style="position:absolute;top:35%;left:75%;width:20px;height:20px;background:blue;" id="blue" onclick="color(this)"></div>
+    <div style="position:absolute;top:35%;left:80%;width:20px;height:20px;background:red;" id="red" onclick="color(this)"></div>
+    <div style="position:absolute;top:40%;left:70%;width:20px;height:20px;background:yellow;" id="yellow" onclick="color(this)"></div>
+    <div style="position:absolute;top:40%;left:75%;width:20px;height:20px;background:orange;" id="orange" onclick="color(this)"></div>
+    <div style="position:absolute;top:40%;left:80%;width:20px;height:20px;background:black;" id="black" onclick="color(this)"></div>
+    <div style="position:absolute;top:45%;left:70%;">Eraser</div>
+    <div style="position:absolute;top:45.2%;left:78%;width:18px;height:18px;background:white;border:2px solid;" id="white" onclick="color(this)"></div>
+    <img id="myCanvas" style="position:absolute;top:10%;left:52%;" style="display:none;">
+    <input type="button" value="clear" id="clr" size="23" onclick="erase()" style="position:absolute;top:55%;left:70%;">
+
 
   	</div>
   		
