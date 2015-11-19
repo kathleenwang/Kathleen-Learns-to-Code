@@ -6,17 +6,38 @@
 
 <head>
 <title>Snowball generator</title>
+<!-- jquery script -->
+<!-- 
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+ -->
 
-
-
+<!-- 
 
 <script>
-function showImage() {
-	$('#snowballAppear').show();
-}
+	function showImage() {
+		$('#snowballAppear').show();
+	}
 </script>
 
+ -->
+
+<script>
+	window.onclick = generateSnowball;
+	
+
+	function generateSnowball() {
+		document.getElementById("snowballAppear").style.display='';
+	}
+
+
+
+
+
+
+ // 	function generateSnowball() {
+	// 	document.getElementsByTagName("BODY") [0].style.backgroundColor="blue";
+	// }
+</script>
 
 
 
@@ -33,10 +54,14 @@ function showImage() {
 	</div>
 </div>
 
+
+
+
+<!-- 
 <form>
 	<input type="button" value="show" onclick="showImage()"></input>
 </form>
-
+ -->
 </body>
 
 
