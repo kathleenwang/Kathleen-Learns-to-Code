@@ -13,47 +13,57 @@
 	<head>
 		<title> make the flower wiggle faster </title>
 		<link rel="stylesheet" href="stylesheets/day3.css">
+		
+		<button onmousedown="myFunction()">CLICK IT!</button>
+		<p id="wiggle"> </p>
 
 		<script type="text/javascript">
 			var mirror = false;
-
+			var showing;
+			
 			function nextImage(){
 				if (mirror) {
 					document.getElementById("img").className = "mirrored";
-				} else {
+					// document.getElementById("wiggle");
+
+					showing = 1;
+				} 
+				else {
 					document.getElementById("img").className = "default";
+					showing = 2;
 				}
 
 				// Toggle
 				mirror = !mirror;
+		
 			}
+
+			function myFunction(){
+				document.getElementById("wiggle");
+
+			// 		//this being activated means wiggle was clicked. 
+					if (showing == 1) {
+						document.getElementById("img").className = "default";
+						showing = 2;
+					}
+					
+
+					else if (showing == 2) {
+						document.getElementById("img").className = "mirrored";
+						showing = 1;
+					}
+				}	
+			
+
+
+
 
 			function startTimer() {
-				setInterval(nextImage,1000);
+				setInterval(nextImage,500);
 			}
 		</script>
 
-		<button onclick="myFunction()">CLICK IT!</button>
-		<p id="wiggle"> </p>
 
-		<script>
-			function myFunction(){
-				document.getElementById("wiggle").innerHTML="HIHI"
-
-			}
-		</script>
-
- 
-<!-- 		<input id="button" type="submit" name="button" value="blah"/>
-
-		<script>
-			var count = 1;
-			document.getElementById('button').onclick = function() {
-   				alert("button was clicked " + (count++) + " times");
-			};=
-
-		</script>
- -->
 
 	</head>
 
