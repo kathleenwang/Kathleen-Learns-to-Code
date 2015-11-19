@@ -1,21 +1,43 @@
 <!doctype html>
 <html>
 	<style>
-		.center img{
-			display:block;
-			margin-right: 42.5%;
-			margin-left: 42.5%;
-			vertical-align: middle;
+		.navbar-header {
+			position: absolute;
+			top: 0px;
+			bottom: 50px;
+			/*bottom: 1000px;*/
+			
 		}
 
+
+		.page-header h1{
+
+			/*margin-left: auto;*/
+			/*margin-right: auto;*/
+			position: absolute;
+			top: 50px;
+			bottom: 50px;
+			
+			
+			
+			
+		}
+
+		.picture img{
+			position: absolute;
+			top: 130px;
+			/*display:block;*/
+			margin-right: 42.5%;
+			margin-left: 42.5%;
+		}
 	</style>
 
 	<head>
 		<title> make the flower wiggle faster </title>
 		<link rel="stylesheet" href="stylesheets/day3.css">
+		<link href="./stylesheets/bootstrap.min.css" rel="stylesheet">
 		
 		<!-- <button onmousedown="myFunction()">CLICK IT!</button> -->
-		<!-- <img id="img" onmousedown = "myFunction()" src="https://41.media.tumblr.com/510ef310d7a6d537e70a1dfdd2906a72/tumblr_nxztotuPKi1um4105o1_400.png"/> -->
 		<!-- <p id="wiggle"> </p> -->
 
 		<script type="text/javascript">
@@ -67,16 +89,29 @@
 	</head>
 
 	<body onload="startTimer()">
-		<div class="center">
-			<img id="img" onmousedown = "myFunction()" src="https://41.media.tumblr.com/510ef310d7a6d537e70a1dfdd2906a72/tumblr_nxztotuPKi1um4105o1_400.png"/>
-			<!-- <img id="img" src="https://41.media.tumblr.com/510ef310d7a6d537e70a1dfdd2906a72/tumblr_nxztotuPKi1um4105o1_400.png"> -->
+<!-- 		<nav class="navbar navbar-default navbar-fixed-top"> -->
+      		<div class="container">
+        		<div class="navbar-header">
+          			<a class="navbar-brand" href="http://kathleenwang.github.io/Kathleen-Learns-to-Code/">Home</a>
+
+        		</div>
+      		</div>
+    	<!-- </nav> -->
+
+    	<div class="container">
+    		<div class="page-header">
+    			<h1>Click the flower to make it wiggle faster! :D</h1>
+    		</div>
+    	</div>
+
+
+    	<div class "container">
+			<div class="picture">
+				<img id="img" onmousedown = "myFunction()" src="https://41.media.tumblr.com/510ef310d7a6d537e70a1dfdd2906a72/tumblr_nxztotuPKi1um4105o1_400.png"/>
+				<!-- <img id="img" src="https://41.media.tumblr.com/510ef310d7a6d537e70a1dfdd2906a72/tumblr_nxztotuPKi1um4105o1_400.png"> -->
+			</div>
 		</div>
 	</body>
-
-
-
-<!--click to flip too-->
-
 
 
 </html>
