@@ -14,8 +14,9 @@
 		<title> make the flower wiggle faster </title>
 		<link rel="stylesheet" href="stylesheets/day3.css">
 		
-		<button onmousedown="myFunction()">CLICK IT!</button>
-		<p id="wiggle"> </p>
+		<!-- <button onmousedown="myFunction()">CLICK IT!</button> -->
+		<!-- <img id="img" onmousedown = "myFunction()" src="https://41.media.tumblr.com/510ef310d7a6d537e70a1dfdd2906a72/tumblr_nxztotuPKi1um4105o1_400.png"/> -->
+		<!-- <p id="wiggle"> </p> -->
 
 		<script type="text/javascript">
 			var mirror = false;
@@ -24,8 +25,6 @@
 			function nextImage(){
 				if (mirror) {
 					document.getElementById("img").className = "mirrored";
-					// document.getElementById("wiggle");
-
 					showing = 1;
 				} 
 				else {
@@ -39,7 +38,7 @@
 			}
 
 			function myFunction(){
-				document.getElementById("wiggle");
+				document.getElementById("img");
 
 			// 		//this being activated means wiggle was clicked. 
 					if (showing == 1) {
@@ -69,7 +68,8 @@
 
 	<body onload="startTimer()">
 		<div class="center">
-			<img id="img" src="https://41.media.tumblr.com/510ef310d7a6d537e70a1dfdd2906a72/tumblr_nxztotuPKi1um4105o1_400.png">
+			<img id="img" onmousedown = "myFunction()" src="https://41.media.tumblr.com/510ef310d7a6d537e70a1dfdd2906a72/tumblr_nxztotuPKi1um4105o1_400.png"/>
+			<!-- <img id="img" src="https://41.media.tumblr.com/510ef310d7a6d537e70a1dfdd2906a72/tumblr_nxztotuPKi1um4105o1_400.png"> -->
 		</div>
 	</body>
 
