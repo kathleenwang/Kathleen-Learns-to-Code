@@ -6,21 +6,14 @@
 			top: 0px;
 			bottom: 50px;
 			/*bottom: 1000px;*/
-			
 		}
 
-
 		.page-header h1{
-
 			/*margin-left: auto;*/
 			/*margin-right: auto;*/
 			position: absolute;
 			top: 50px;
-			bottom: 50px;
-			
-			
-			
-			
+			bottom: 50px;	
 		}
 
 		.picture img{
@@ -55,37 +48,27 @@
 				}
 
 				// Toggle
-				mirror = !mirror;
-		
+				mirror = !mirror;		
 			}
 
 			function myFunction(){
 				document.getElementById("img");
-
 			// 		//this being activated means wiggle was clicked. 
 					if (showing == 1) {
 						document.getElementById("img").className = "default";
 						showing = 2;
 					}
-					
 
 					else if (showing == 2) {
 						document.getElementById("img").className = "mirrored";
 						showing = 1;
 					}
 				}	
-			
-
-
-
 
 			function startTimer() {
 				setInterval(nextImage,500);
 			}
 		</script>
-
-
-
 	</head>
 
 	<body onload="startTimer()">
@@ -104,7 +87,6 @@
     		</div>
     	</div>
 
-
     	<div class "container">
 			<div class="picture">
 				<img id="img" onmousedown = "myFunction()" src="https://41.media.tumblr.com/510ef310d7a6d537e70a1dfdd2906a72/tumblr_nxztotuPKi1um4105o1_400.png"/>
@@ -112,6 +94,4 @@
 			</div>
 		</div>
 	</body>
-
-
 </html>
