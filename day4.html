@@ -11,49 +11,74 @@
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
  -->
 
-<!-- 
+
+
+
+
+
+<p id="demo"></p>
+
 
 <script>
-	function showImage() {
-		$('#snowballAppear').show();
-	}
+	document.onclick = userClicked; //window.onclick doesnt work with IE so use document.onclick
+	function userClicked(event) {
+
+		var x = event.clientX;
+		var y = event.clientY;
+		var snowball = document.getElementById("snowballAppear");
+		snowball.style.display = '';
+        snowball.style.position = 'absolute';
+        snowball.style.left = x + 'px';
+        snowball.style.top = y + 'px';
+    }
+
 </script>
-
- -->
-
-<script>
-	window.onclick = generateSnowball;
-	
-
-	function generateSnowball() {
-		document.getElementById("snowballAppear").style.display='';
-	}
-
-
-
-
-
-
- // 	function generateSnowball() {
-	// 	document.getElementsByTagName("BODY") [0].style.backgroundColor="blue";
-	// }
-</script>
-
-
 
 </head>
 
 
 
+
+
+
 <body>
-
-
 <div class "container">
-	<div class "picture">
-		<img alt="snowballAppear" id="snowballAppear" style="display: none" src="http://vignette3.wikia.nocookie.net/pottermore/images/9/99/Snowball-lrg.png/revision/latest?cb=20130412122815"/>
-	</div>
+    <div class "picture">
+        <img alt="snowballAppear" id="snowballAppear" style="display: none" src="http://vignette3.wikia.nocookie.net/pottermore/images/9/99/Snowball-lrg.png/revision/latest?cb=20130412122815"/>
+    </div>
 </div>
 
+
+
+
+<script>
+// document.onclick= showCoordinates;
+// function showCoordinates() {
+//     var x = event.clientX;
+//     var y = event.clientY;
+//     var coords = "X coords: " + x + ", Y coords: " + y;
+//  //   document.getElementById("demo").innerHTML=coords;
+
+// }
+
+// document.onclick= snowballShow;
+// function snowballShow() {
+// 	document.getElementById("snowballAppear").style.display='';
+// }
+
+
+
+</script>
+
+
+
+<!-- <div class "container">
+	<div class "coordinatesOfClick">
+		<p>x and y </p>
+
+	</div>
+</div>
+ -->
 
 
 
@@ -64,5 +89,6 @@
  -->
 </body>
 
+<!-- add popup message when first visiting page to click anywhere -->
 
 </html>
