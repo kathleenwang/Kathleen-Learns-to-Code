@@ -3,14 +3,10 @@
 	<style>
 		.center img{
 			display:block;
-
-			margin-right: auto;
-			margin-left: auto;
+			margin-right: 42.5%;
+			margin-left: 42.5%;
 			vertical-align: middle;
-
-
 		}
-
 
 	</style>
 
@@ -36,8 +32,30 @@
 				setInterval(nextImage,1000);
 			}
 		</script>
-	</head>
 
+		<button onclick="myFunction()">CLICK IT!</button>
+		<p id="wiggle"> </p>
+
+		<script>
+			function myFunction(){
+				document.getElementById("wiggle").innerHTML="HIHI"
+
+			}
+		</script>
+
+ 
+<!-- 		<input id="button" type="submit" name="button" value="blah"/>
+
+		<script>
+			var count = 1;
+			document.getElementById('button').onclick = function() {
+   				alert("button was clicked " + (count++) + " times");
+			};=
+
+		</script>
+ -->
+
+	</head>
 
 	<body onload="startTimer()">
 		<div class="center">
@@ -47,7 +65,6 @@
 
 
 
-<!--rotate around a pivot instead of flipping entire image-->
 <!--click to flip too-->
 
 

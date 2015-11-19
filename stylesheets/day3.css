@@ -4,8 +4,9 @@
 
 .mirrored {
 	transform: scale(-1,1);
-	transform-origin:bottom left;
+	transform-origin: 26% bottom;
 	-webkit-transform: scale(-1,1);
 	-moz-transform: scale(-1,1);
 	-o-transform: scale(-1,1);
 }
+
