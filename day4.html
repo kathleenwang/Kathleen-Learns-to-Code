@@ -30,6 +30,7 @@ body{
 	document.onclick = userClicked; //window.onclick doesnt work with IE so use document.onclick
 	function userClicked(event) {
 		var newBall = document.createElement("IMG");
+        newBall.className="newww";
         newBall.setAttribute("src","https://41.media.tumblr.com/7318ea53766577e5d0c8a0eba953ce27/tumblr_ny3hu1REEt1qh6v2wo1_250.png");
         newBall.setAttribute("width", "104");
         newBall.setAttribute("width", "60");
@@ -43,6 +44,7 @@ body{
         newBall.style.left = x + z + 'px';
         newBall.style.top = y + z + 'px';
 		document.body.appendChild(newBall);
+
 		// document.getElementById("placeHere").appendChild(newBall);
 	}
 
@@ -92,6 +94,32 @@ body{
 
 </script>
 
+
+<!-- 
+<script language='JavaScript' type='text/JavaScript'>
+
+
+function disp(){
+    var step=5; // Change this step value
+    var y=document.getElementsByClassName('newww').offsetTop;
+    if(y < 600 ){y= y +step; //makes sure it stops at the bottom
+        document.getElementsByClassName('newww').style.top= y + "px"; // vertical movment
+    }
+}
+
+function timer(){
+    disp();
+    var y=document.getElementsByClassName('newww').offsetTop;
+    my_time=setTimeout('timer()',10);
+}
+
+
+//-->
+</script>
+
+
+ -->
+
 </head>
 
 
@@ -105,6 +133,15 @@ body{
         <img alt="snowballAppear" id="snowballAppear" style="display: none" src="https://41.media.tumblr.com/7318ea53766577e5d0c8a0eba953ce27/tumblr_ny3hu1REEt1qh6v2wo1_250.png"/>
     </div>
 </div>
+
+<!-- 
+
+<img src="http://vignette3.wikia.nocookie.net/pottermore/images/9/99/Snowball-lrg.png/revision/latest?cb=20130412122815" id='i1' style="position:absolute; left: 500px; top: 100;">
+<br><br><br><br>
+<input type=button onClick=timer() value='Start'>
+
+
+ -->
 
 
 <!-- <div id="placeHere">
