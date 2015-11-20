@@ -22,6 +22,14 @@
 <script>
 	document.onclick = userClicked; //window.onclick doesnt work with IE so use document.onclick
 	function userClicked(event) {
+		var newBall = document.createElement("IMG");
+        newBall.setAttribute("src","http://vignette3.wikia.nocookie.net/pottermore/images/9/99/Snowball-lrg.png/revision/latest?cb=20130412122815");
+        newBall.setAttribute("width", "104");
+        newBall.setAttribute("width", "228");
+        newBall.setAttribute("alt", "Snowball creator");
+        document.body.appendChild(newBall);
+
+
 
 		var x = event.clientX;
 		var y = event.clientY;
@@ -47,38 +55,6 @@
         <img alt="snowballAppear" id="snowballAppear" style="display: none" src="http://vignette3.wikia.nocookie.net/pottermore/images/9/99/Snowball-lrg.png/revision/latest?cb=20130412122815"/>
     </div>
 </div>
-
-
-
-
-<script>
-// document.onclick= showCoordinates;
-// function showCoordinates() {
-//     var x = event.clientX;
-//     var y = event.clientY;
-//     var coords = "X coords: " + x + ", Y coords: " + y;
-//  //   document.getElementById("demo").innerHTML=coords;
-
-// }
-
-// document.onclick= snowballShow;
-// function snowballShow() {
-// 	document.getElementById("snowballAppear").style.display='';
-// }
-
-
-
-</script>
-
-
-
-<!-- <div class "container">
-	<div class "coordinatesOfClick">
-		<p>x and y </p>
-
-	</div>
-</div>
- -->
 
 
 
