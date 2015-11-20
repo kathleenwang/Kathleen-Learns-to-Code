@@ -26,7 +26,7 @@ body{
 	document.onclick = userClicked; //window.onclick doesnt work with IE so use document.onclick
 	function userClicked(event) {
 		var newBall = document.createElement("IMG");
-        newBall.className="newww";
+        newBall.className = "snowball";
         newBall.setAttribute("src","https://41.media.tumblr.com/7318ea53766577e5d0c8a0eba953ce27/tumblr_ny3hu1REEt1qh6v2wo1_250.png");
         newBall.setAttribute("width", "104");
         newBall.setAttribute("width", "60");
@@ -40,53 +40,45 @@ body{
         newBall.style.left = x + z + 'px';
         newBall.style.top = y + z + 'px';
 		document.body.appendChild(newBall);
-
-		// document.getElementById("placeHere").appendChild(newBall);
 	}
 
-	// document.onmouseup = mouseUp;
-	// 	// // document.onmouseup = snowFall;
-	// 	function mouseUp(event) {
-    	
- //    	var step=5; // Change this step value
- //    	var newY=document.getElementById('SnowballAppear').offsetTop;
- //    	if(newY < 600 ){newY= newY +step; //makes sure it stops at the bottom
- //        	document.getElementById('SnowballAppear').style.top= newY + "px"; // vertical movment
- //    	}
+// starting movement stuff
 
+    function getIntegerFromPx(inputString) {
+        var endIdx;
 
- //    	userClicked();
- //    	var newY=document.getElementById('SnowballAppear').offsetTop;
- //    	my_time=setTimeout('timer()',10);
+        if (inputString) {
+           inputString.indexOf('px');
+       } else {
+            return undefined;
+       }
 
+        return parseInt(inputString.substring(0, endIdx));
+    }
 
-	// 	}
+    function moveSnowballsDown(flakeSpeed) {
+        var snowball;
+        var snowballs = document.getElementsByClassName("snowball");
+        var currY;
+        var nextY;
 
+        for (var i = 0; i < snowballs.length; ++i) {
+            snowball = snowballs[i];
 
-    
+            currY = getIntegerFromPx(snowball.style.top);
+            nextY = currY + flakeSpeed;
 
+            // If the flakes reach the bottom, don't move. c:
+            if (nextY >= window.innerHeight - 30) {
+                nextY = currY;
+            }
 
-    // document.onmouseup = startFall;
-    // function startFall(event) {
+            snowball.style.top = nextY + 'px';
+        }
+    }
 
-    // }
-
- //    function userClicked(event) {
-
-	// }
-
-// 	function timer(){
-//     disp();
-//     var y=document.getElementById('i1').offsetTop;
-//     my_time=setTimeout('timer()',10);
-// }
-
-
-
-
-
-
-
+    setInterval(function() { moveSnowballsDown(10); }, 300);
+//end movement stuff
 
 </script>
 
