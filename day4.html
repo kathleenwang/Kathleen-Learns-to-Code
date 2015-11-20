@@ -16,7 +16,6 @@
 
 
 
-<p id="demo"></p>
 
 
 <script>
@@ -27,17 +26,22 @@
         newBall.setAttribute("width", "104");
         newBall.setAttribute("width", "228");
         newBall.setAttribute("alt", "Snowball creator");
-        document.body.appendChild(newBall);
-
 
 
 		var x = event.clientX;
 		var y = event.clientY;
-		var snowball = document.getElementById("snowballAppear");
-		snowball.style.display = '';
-        snowball.style.position = 'absolute';
-        snowball.style.left = x + 'px';
-        snowball.style.top = y + 'px';
+		// var snowball = document.getElementById("snowballAppear");
+		// snowball.style.display = '';
+  //       snowball.style.position = 'absolute';
+  //       snowball.style.left = x + 'px';
+  //       snowball.style.top = y + 'px';
+
+        newBall.style.display = '';
+        newBall.style.position = 'absolute';
+        newBall.style.left = x + 'px';
+        newBall.style.top = y + 'px';
+		document.body.appendChild(newBall);
+
     }
 
 </script>
