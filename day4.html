@@ -2,6 +2,21 @@
 <html>
 
 <style>
+
+body{
+	/*background-color:SkyBlue;*/
+	/*background-image: url("http://www.wallpaperup.com/uploads/wallpapers/2013/09/12/147061/e98076b5ab8d1ad85536394ba2e5d474.jpg");*/
+
+
+  background: url(http://www.wallpaperup.com/uploads/wallpapers/2013/09/12/147061/e98076b5ab8d1ad85536394ba2e5d474.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+
+}
+
 </style>
 
 <head>
@@ -11,38 +26,69 @@
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
  -->
 
-
-
-
-
-
-
-
 <script>
 	document.onclick = userClicked; //window.onclick doesnt work with IE so use document.onclick
 	function userClicked(event) {
 		var newBall = document.createElement("IMG");
-        newBall.setAttribute("src","http://vignette3.wikia.nocookie.net/pottermore/images/9/99/Snowball-lrg.png/revision/latest?cb=20130412122815");
+        newBall.setAttribute("src","https://41.media.tumblr.com/7318ea53766577e5d0c8a0eba953ce27/tumblr_ny3hu1REEt1qh6v2wo1_250.png");
         newBall.setAttribute("width", "104");
-        newBall.setAttribute("width", "228");
+        newBall.setAttribute("width", "60");
         newBall.setAttribute("alt", "Snowball creator");
-
 
 		var x = event.clientX;
 		var y = event.clientY;
-		// var snowball = document.getElementById("snowballAppear");
-		// snowball.style.display = '';
-  //       snowball.style.position = 'absolute';
-  //       snowball.style.left = x + 'px';
-  //       snowball.style.top = y + 'px';
-
+		var z = -30;
         newBall.style.display = '';
         newBall.style.position = 'absolute';
-        newBall.style.left = x + 'px';
-        newBall.style.top = y + 'px';
+        newBall.style.left = x + z + 'px';
+        newBall.style.top = y + z + 'px';
 		document.body.appendChild(newBall);
+		// document.getElementById("placeHere").appendChild(newBall);
+	}
 
-    }
+	// document.onmouseup = mouseUp;
+	// 	// // document.onmouseup = snowFall;
+	// 	function mouseUp(event) {
+    	
+ //    	var step=5; // Change this step value
+ //    	var newY=document.getElementById('SnowballAppear').offsetTop;
+ //    	if(newY < 600 ){newY= newY +step; //makes sure it stops at the bottom
+ //        	document.getElementById('SnowballAppear').style.top= newY + "px"; // vertical movment
+ //    	}
+
+
+ //    	userClicked();
+ //    	var newY=document.getElementById('SnowballAppear').offsetTop;
+ //    	my_time=setTimeout('timer()',10);
+
+
+	// 	}
+
+
+    
+
+
+    // document.onmouseup = startFall;
+    // function startFall(event) {
+
+    // }
+
+ //    function userClicked(event) {
+
+	// }
+
+// 	function timer(){
+//     disp();
+//     var y=document.getElementById('i1').offsetTop;
+//     my_time=setTimeout('timer()',10);
+// }
+
+
+
+
+
+
+
 
 </script>
 
@@ -56,11 +102,14 @@
 <body>
 <div class "container">
     <div class "picture">
-        <img alt="snowballAppear" id="snowballAppear" style="display: none" src="http://vignette3.wikia.nocookie.net/pottermore/images/9/99/Snowball-lrg.png/revision/latest?cb=20130412122815"/>
+        <img alt="snowballAppear" id="snowballAppear" style="display: none" src="https://41.media.tumblr.com/7318ea53766577e5d0c8a0eba953ce27/tumblr_ny3hu1REEt1qh6v2wo1_250.png"/>
     </div>
 </div>
 
 
+<!-- <div id="placeHere">
+</div>
+ -->
 
 <!-- 
 <form>
