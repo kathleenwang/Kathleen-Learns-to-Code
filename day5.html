@@ -1,5 +1,63 @@
 <!doctype html>
 <html>
+<style>
+
+/*body{
+	background-color: #C2DFFF;
+}*/
+
+/*
+div {
+    width: 100%;
+    height: 100%;
+    background: #5CB85C;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+label.btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2; 
+}
+input[type="checkbox"]{
+    display: none;
+}
+input[type="checkbox"]:checked + div{
+    background: #C2DFFF;
+}
+
+
+
+*/
+
+
+
+</style>
+
+
+
+<head>
+<title>Colorful Shapes</title>
+
+<script> 
+
+// function userClicked(event) {
+// 	document.getElementById("rectangles").style.color = "blue";
+
+
+	// document.onclick = userClicked; //window.onclick doesnt work with IE so use document.onclick
+	// function userClicked(event) {
+	// 	function getRandomColor() {
+ //    var letters = '0123456789ABCDEF'.split('');
+ //    var color = '#';
+ //    for (var i = 0; i < 6; i++ ) {
+ //        color += letters[Math.floor(Math.random() * 16)];
+ //    }
+ //    return color;
+	// }
 
 
 
@@ -8,5 +66,127 @@
 
 
 
+		// var newBall = document.createElement("IMG");
+  //       newBall.className = "snowball";
+  //       newBall.setAttribute("src","https://41.media.tumblr.com/7318ea53766577e5d0c8a0eba953ce27/tumblr_ny3hu1REEt1qh6v2wo1_250.png");
+  //       newBall.setAttribute("width", "104");
+  //       newBall.setAttribute("width", "60");
+  //       newBall.setAttribute("alt", "Snowball creator");
 
+		// var x = event.clientX;
+		// var y = event.clientY;
+		// var z = -30;
+  //       newBall.style.display = '';
+  //       newBall.style.position = 'absolute';
+  //       newBall.style.left = x + z + 'px';
+  //       newBall.style.top = y + z + 'px';
+		// document.body.appendChild(newBall);
+	
+
+
+
+function setbackground()
+{
+window.setTimeout( "setbackground()", 700); // 0.7 second delay
+
+var index = Math.round(Math.random() * 9);
+
+var ColorValue = "FFFFFF"; // default color - white (index = 0)
+
+if(index == 1)
+ColorValue = "FFCCCC"; //peach
+if(index == 2)
+ColorValue = "CCAFFF"; //violet
+if(index == 3)
+ColorValue = "A6BEFF"; //lt blue
+if(index == 4)
+ColorValue = "99FFFF"; //cyan
+if(index == 5)
+ColorValue = "D5CCBB"; //tan
+if(index == 6)
+ColorValue = "99FF99"; //lt green
+if(index == 7)
+ColorValue = "FFFF99"; //lt yellow
+if(index == 8)
+ColorValue = "FFCC99"; //lt orange
+if(index == 9)
+ColorValue = "CCCCCC"; //lt grey
+
+
+
+document.getElementsByTagName("body")[0].style.backgroundColor = "#" + ColorValue;
+
+}
+
+</script>
+
+
+<!-- 
+<script>
+
+function getRandomColor() {
+    var letters = '0123456789ABCDEF'.split('');
+    var color = '#';
+    for (var i = 0; i < 6; i++ ) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+</script>
+
+
+ -->
+
+
+
+</head>
+
+
+
+<body onload="setbackground();">
+<div class "container">
+	<div class="rectangles" id="rectangles">
+		<div style="position: absolute; left: 100px; top: 100px; width:80px;height:50px;background-color: pink; border:1px solid #000;"></div>
+		<div style="position: absolute; left: 400px; top: 400px; width:84px;height:90px;background-color: skyblue; border:1px solid #000;"></div>
+		<div style="position: absolute; left: 80px; top: 200px; width:20px;height:20px;background-color: lightgreen;border:1px solid #000;"></div>
+		<div style="position: absolute; left: 20px; top: 550px; width:104px;height:95px;background-color: yellow; border:1px solid #000;"></div>
+		<div style="position: absolute; left: 800px; top: 300px; width:70px;height:90px;background-color: orange; border:1px solid #000;"></div>
+		<div style="position: absolute; left: 900px; top: 400px; width:14px;height:10px;background-color: pink; border:1px solid #000;"></div>
+		<div style="position: absolute; left: 600px; top: 100px; width:140px;height:90px;background-color: lightgreen; border:1px solid #000;"></div>
+		<div style="position: absolute; left: 1000px; top: 200px; width:170px;height:60px;background-color: skyblue; border:1px solid #000;"></div>
+		<div style="position: absolute; left: 1100px; top: 600px; width:44px;height:30px;background-color: yellow; border:1px solid #000;"></div>
+	</div>
+</div>	
+
+
+<div class "container">
+	<div class="circles" id="circles">
+		<div style="position: absolute; left: 10px; top: 10px; width:44px; height:44px; border-radius:50px; background-color: skyblue; border:1px solid #000;"></div>
+		<div style="position: absolute; left: 300px; top: 30px; width:90px; height:90px; border-radius:50px; background-color: skyblue; border:1px solid #000;"></div>
+		<div style="position: absolute; left: 450px; top: 300px; width:76px; height:76px; border-radius:50px; background-color: orange; border:1px solid #000;"></div>
+		<div style="position: absolute; left: 770px; top: 500px; width:100px; height:100px; border-radius:50px; background-color: yellow; border:1px solid #000;"></div>
+		<div style="position: absolute; left: 1070px; top: 10px; width:95px; height:95px; border-radius:50px; background-color: pink; border:1px solid #000;"></div>
+		<div style="position: absolute; left: 1050px; top: 400px; width:70px; height:70px; border-radius:50px; background-color: lightgreen; border:1px solid #000;"></div>
+		<div style="position: absolute; left: 300px; top: 650px; width:44px; height:44px; border-radius:50px; background-color: lightgreen; border:1px solid #000;"></div>
+		<div style="position: absolute; left: 180px; top: 390px; width:65px; height:65px; border-radius:50px; background-color: pink; border:1px solid #000;"></div>
+		<div style="position: absolute; left: 10px; top: 10px; width:44px; height:44px; border-radius:50px; background-color: yellow; border:1px solid #000;"></div>
+	</div>
+</div>
+<!-- 
+<div class "container">
+	<div class="oneRectangle" id="oneRectangle">
+	<div style="position: absolute; left: 10px; top: 10px; width:44px;height:30px;border:1px solid #000;"></div>
+	</div>
+</div>
+ -->
+
+<!-- <label for="check" class="btn btn-default">Toggle background colour</label>
+<input type="checkbox" id="check" />
+<div></div> -->
+
+<!-- <button type="button" onclick="alert('Hello world!')">Click Me!</button> -->
+
+
+</body>
 </html>
