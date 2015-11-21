@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<style>
+</style>
+
+
+<header>
+<title>Colorful Shapes Part II</title>
+
+<p id="demo"></p>
+
+<script>
+document.onclick=showCoords;
+function showCoords(event) {
+    var x = event.clientX;
+    var y = event.clientY;
+    var coords = "X coords: " + x + ", Y coords: " + y;
+    // document.getElementById("demo").innerHTML = coords;
+
+    if (x>=100 && x<=180 && y>=100 && y<=150){
+    	// document.getElementById("demo").innerHTML = coords;
+    	document.body.style.backgroundColor="#FFFF99"
+    }
+    else if (x>=400 && x <=484 && y>=400 && y<=490){
+    	// document.getElementById("demo").innerHTML = x;
+    	document.body.style.backgroundColor="#CCAFFF"
+    }
+    // else if (x>=80 && x<=100 && y>=200 && y<=220){
+    // 	document.body.style.backgroundColor="#FFCCCC"
+
+    // }
+    else if (x>=20 && x<=124 && y>=550 && y<=645){
+    	document.body.style.backgroundColor="#FFCC99"
+
+    }
+    else if (x>=800 && x<=870 && y>=300 && y<=390){
+    	document.body.style.backgroundColor="#99FFFF"
+
+    }
+    // else if (x>=900 && x<=914 && y>=400 && y<=410){
+    // 	document.body.style.backgroundColor="#CCCCCC"
+
+    // }
+    else if (x>=600 && x<=740 && y>=100 && y<=190){
+    	document.body.style.backgroundColor="skyblue"
+
+    }
+    else if (x>=1000 && x<=1170 && y>=200 && y<=260){
+    	document.body.style.backgroundColor="#D5CCBB"
+
+    }
+    // else if (x>=1100 && x<=1144 && y>=600 && y<=230){
+    // 	document.body.style.backgroundColor="#99FFFF"
+
+    // }
+}
+
+
+</script>
+</header>
+<body>
+<div class "container">
+	<div class="rectangles" id="rectangles">
+		<div style="position: absolute; left: 100px; top: 100px; width:80px;height:50px;background-color: pink; border:1px solid #000;"></div>
+		<div style="position: absolute; left: 400px; top: 400px; width:84px;height:90px;background-color: skyblue; border:1px solid #000;"></div>
+	<!-- 	<div style="position: absolute; left: 80px; top: 200px; width:20px;height:20px;background-color: lightgreen;border:1px solid #000;"></div> -->
+		<div style="position: absolute; left: 20px; top: 550px; width:104px;height:95px;background-color: yellow; border:1px solid #000;"></div>
+		<div style="position: absolute; left: 800px; top: 300px; width:70px;height:90px;background-color: orange; border:1px solid #000;"></div>
+<!-- 		<div style="position: absolute; left: 900px; top: 400px; width:14px;height:10px;background-color: pink; border:1px solid #000;"></div> -->
+		<div style="position: absolute; left: 600px; top: 100px; width:140px;height:90px;background-color: lightgreen; border:1px solid #000;"></div>
+		<div style="position: absolute; left: 1000px; top: 200px; width:170px;height:60px;background-color: skyblue; border:1px solid #000;"></div>
+<!-- 		<div style="position: absolute; left: 1100px; top: 600px; width:44px;height:30px;background-color: yellow; border:1px solid #000;"></div> -->
+	</div>
+</div>	
+
+
+</body>
+</html>
