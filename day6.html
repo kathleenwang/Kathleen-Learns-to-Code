@@ -6,29 +6,23 @@
 
 <header>
 <title>Colorful Shapes Part II</title>
-
-<p id="demo"></p>
-
+<link href="./stylesheets/bootstrap.min.css" rel="stylesheet">
 <script>
 document.onclick=showCoords;
 function showCoords(event) {
     var x = event.clientX;
     var y = event.clientY;
     var coords = "X coords: " + x + ", Y coords: " + y;
-    // document.getElementById("demo").innerHTML = coords;
+
 
     if (x>=100 && x<=180 && y>=100 && y<=150){
-    	// document.getElementById("demo").innerHTML = coords;
+    	
     	document.body.style.backgroundColor="#FFFF99"
     }
     else if (x>=400 && x <=484 && y>=400 && y<=490){
-    	// document.getElementById("demo").innerHTML = x;
+    	
     	document.body.style.backgroundColor="#CCAFFF"
     }
-    // else if (x>=80 && x<=100 && y>=200 && y<=220){
-    // 	document.body.style.backgroundColor="#FFCCCC"
-
-    // }
     else if (x>=20 && x<=124 && y>=550 && y<=645){
     	document.body.style.backgroundColor="#FFCC99"
 
@@ -37,10 +31,6 @@ function showCoords(event) {
     	document.body.style.backgroundColor="#99FFFF"
 
     }
-    // else if (x>=900 && x<=914 && y>=400 && y<=410){
-    // 	document.body.style.backgroundColor="#CCCCCC"
-
-    // }
     else if (x>=600 && x<=740 && y>=100 && y<=190){
     	document.body.style.backgroundColor="skyblue"
 
@@ -49,13 +39,7 @@ function showCoords(event) {
     	document.body.style.backgroundColor="#D5CCBB"
 
     }
-    // else if (x>=1100 && x<=1144 && y>=600 && y<=230){
-    // 	document.body.style.backgroundColor="#99FFFF"
-
-    // }
 }
-
-
 </script>
 </header>
 <body>
@@ -72,6 +56,12 @@ function showCoords(event) {
 <!-- 		<div style="position: absolute; left: 1100px; top: 600px; width:44px;height:30px;background-color: yellow; border:1px solid #000;"></div> -->
 	</div>
 </div>	
+
+<footer>
+	<a href="index.html" id="box_1" style="position: absolute; color: pink; ">
+      Home
+	</a>
+</footer>
 
 
 </body>
