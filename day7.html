@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<style>
+body {
+	background-color: black
+}
+
+
+</style>
+<head>
+<title>Starry Snake</title>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+<script>
+	document.onmousemove= userMoved; 
+	function userMoved(event) {
+		var newSparkle = document.createElement("IMG");
+        newSparkle.className = "snowball";
+        newSparkle.setAttribute("src","http://orig01.deviantart.net/7001/f/2009/065/1/9/sparkle_png_by_pvs_by_pixievamp_stock.png");
+        newSparkle.setAttribute("width", "104");
+        newSparkle.setAttribute("width", "60");
+        newSparkle.setAttribute("alt", "Sparkle Creator");
+
+		var x = event.clientX;
+		var y = event.clientY;
+		var z = -30;
+        newSparkle.style.display = '';
+        newSparkle.style.position = 'absolute';
+        newSparkle.style.left = x + z + 'px';
+        newSparkle.style.top = y + z + 'px';
+		document.body.appendChild(newSparkle);
+	}
+</script>
+
+<script>
+$(document).ready(function() {
+    setTimeout(function() {
+        $(".directions").fadeOut(1500);
+    }, 3000);
+
+    $('#btnReset').click(function() {
+        $(".directions").show();
+        setTimeout(function() {
+            $(".directions").fadeOut(1500);
+        }, 3000);
+    });
+});
+</script>
+
+</head>
+
+<body>
+<header>
+	<a href="index.html" id="box_1" style="position: absolute; color: white; ">
+      Home
+	</a>
+</header>
+<div class "container">
+	<div class = "directions" style="Position: absolute; left: 100px; font-size: 38px; color: white">Move your mouse around~
+	</div>
+</div>	
+
+
+
+
+</body>
+</html>
