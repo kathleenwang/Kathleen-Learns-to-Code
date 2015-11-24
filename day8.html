@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<style>
+.row1{
+	background-color: lavender;
+
+}
+
+
+</style>
+
+
+<head>
+<link href="./stylesheets/bootstrap.min.css" rel="stylesheet">
+
+
+
+<script>
+	document.onmousemove= userMoved; 
+	function userMoved(event) {
+	    var x = event.clientX;
+    	var y = event.clientY;
+    	var coords = "X coords: " + x + ", Y coords: " + y;
+
+    	var index = Math.round(Math.random() * 9);
+		var ColorValue = "FFFFFF"; // default color - white (index = 0)
+			if(index == 1)
+			ColorValue = "FFCCCC"; //peach
+			if(index == 2)
+			ColorValue = "CCAFFF"; //violet
+			if(index == 3)
+			ColorValue = "A6BEFF"; //lt blue
+			if(index == 4)
+			ColorValue = "99FFFF"; //cyan
+			if(index == 5)
+			ColorValue = "D5CCBB"; //tan
+			if(index == 6)
+			ColorValue = "99FF99"; //lt green
+			if(index == 7)
+			ColorValue = "FFFF99"; //lt yellow
+			if(index == 8)
+			ColorValue = "FFCC99"; //lt orange
+			if(index == 9)
+			ColorValue = "CCCCCC"; //lt grey
+
+
+		
+		if (x<=100 && x<=180 && y<=100 && y<=100){
+    		document.getElementById("row1column1").style.backgroundColor = "#"+ColorValue;
+    		document.getElementById("row2column1").style.backgroundColor = "#"+ColorValue;
+    	}
+    	else if (x>=400 && x <=484 && y>=400 && y<=490){    	
+    		document.body.style.backgroundColor="#CCAFFF"
+    	}
+    	else if (x>=20 && x<=124 && y>=550 && y<=645){
+    		document.body.style.backgroundColor="#FFCC99"
+    	}
+   	 	else if (x>=800 && x<=870 && y>=300 && y<=390){
+    		document.body.style.backgroundColor="#99FFFF"
+    	}
+    	else if (x>=600 && x<=740 && y>=100 && y<=190){
+    		document.body.style.backgroundColor="skyblue"
+    	}
+    	else if (x>=1000 && x<=1170 && y>=200 && y<=260){
+    		document.body.style.backgroundColor="#D5CCBB"
+    	}
+	}
+</script>
+
+
+
+
+</head>
+
+
+
+<body>
+
+<div class="container">
+  <div class="row1">
+    <div class="col-sm-2" id="row1column1">.col-sm-4</div>
+    <div class="col-sm-2">.col-sm-4</div>
+    <div class="col-sm-2">.col-sm-4</div>
+    <div class="col-sm-2">.col-sm-4</div>
+	<div class="col-sm-2">.col-sm-4</div>
+    <div class="col-sm-2">.col-sm-4</div>
+<!--    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div>
+    <div class="col-sm-4" style="background-color:lavenderblush;">.col-sm-4</div>
+    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div>
+    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div>
+    <div class="col-sm-4" style="background-color:lavenderblush;">.col-sm-4</div>
+    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div> -->
+  </div>
+  <div class="row2">
+    <div class="col-sm-2" id="row2column1">.col-sm-4</div>
+    <div class="col-sm-2" style="background-color:lavenderblush;">.col-sm-4</div>
+    <div class="col-sm-2" style="background-color:lavender;">.col-sm-4</div>
+    <div class="col-sm-2" style="background-color:lavenderblush;">.col-sm-4</div>
+	<div class="col-sm-2" style="background-color:lavender;">.col-sm-4</div>
+    <div class="col-sm-2" style="background-color:lavenderblush;">.col-sm-4</div>
+  </div>
+    <div class="row3">
+    <div class="col-sm-2" style="background-color:lavender;">.col-sm-4</div>
+    <div class="col-sm-2" style="background-color:lavenderblush;">.col-sm-4</div>
+    <div class="col-sm-2" style="background-color:lavender;">.col-sm-4</div>
+    <div class="col-sm-2" style="background-color:lavenderblush;">.col-sm-4</div>
+	<div class="col-sm-2" style="background-color:lavender;">.col-sm-4</div>
+    <div class="col-sm-2" style="background-color:lavenderblush;">.col-sm-4</div>
+  </div>
+  <div class="row4">
+    <div class="col-sm-2" style="background-color:lavender;">.col-sm-4</div>
+    <div class="col-sm-2" style="background-color:lavenderblush;">.col-sm-4</div>
+    <div class="col-sm-2" style="background-color:lavender;">.col-sm-4</div>
+    <div class="col-sm-2" style="background-color:lavenderblush;">.col-sm-4</div>
+	<div class="col-sm-2" style="background-color:lavender;">.col-sm-4</div>
+    <div class="col-sm-2" style="background-color:lavenderblush;">.col-sm-4</div>
+  </div>
+  <div class="row5">
+    <div class="col-sm-2" style="background-color:lavender;">.col-sm-4</div>
+    <div class="col-sm-2" style="background-color:lavenderblush;">.col-sm-4</div>
+    <div class="col-sm-2" style="background-color:lavender;">.col-sm-4</div>
+    <div class="col-sm-2" style="background-color:lavenderblush;">.col-sm-4</div>
+	<div class="col-sm-2" style="background-color:lavender;">.col-sm-4</div>
+    <div class="col-sm-2" style="background-color:lavenderblush;">.col-sm-4</div>
+  </div>
+
+</div>
+
+
+
+
+
+</body>
+</html>
