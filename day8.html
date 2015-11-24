@@ -1,6 +1,14 @@
 <!doctype html>
 <html>
 <style>
+body{
+	/*background-image: url("http://www.wallpaperup.com/uploads/wallpapers/2013/09/12/147061/e98076b5ab8d1ad85536394ba2e5d474.jpg");*/
+  background: url(http://vignette1.wikia.nocookie.net/vsbattles/images/a/a3/Black-windows_542931.jpg/revision/latest?cb=20150317090032) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 </style>
 
 
@@ -39,27 +47,70 @@
 			ColorValue = "CCCCCC"; //lt grey
 
 
-		
-		if (x>100 && x<200 && y>100 && y<200){
+		// Column 1 stuffs
+		if (x>100 && x<201 && y>100 && y<200){
     		document.getElementById("row1column1").style.backgroundColor = "#"+ColorValue;
     	}
-    	else if (x>100 && x <200 && y>200 && y<300){    	
+    	else if (x>100 && x<201 && y>199 && y<300){    	
     		document.getElementById("row2column1").style.backgroundColor = "#"+ColorValue;
     	}
-    	else if (x>=20 && x<=124 && y>=550 && y<=645){
-    		document.body.style.backgroundColor="#FFCC99"
+    	else if (x>100 && x<201 && y>299 && y<400){
+    		document.getElementById("row3column1").style.backgroundColor = "#"+ColorValue;
     	}
-   	 	else if (x>=800 && x<=870 && y>=300 && y<=390){
-    		document.body.style.backgroundColor="#99FFFF"
+   	 	else if (x>100 && x<201 && y>399 && y<500){
+			document.getElementById("row4column1").style.backgroundColor = "#"+ColorValue;
     	}
-    	else if (x>=600 && x<=740 && y>=100 && y<=190){
-    		document.body.style.backgroundColor="skyblue"
+    	else if (x>100 && x<201 && y>499 && y<600){    	
+    		document.getElementById("row5column1").style.backgroundColor = "#"+ColorValue;
     	}
-    	else if (x>=1000 && x<=1170 && y>=200 && y<=260){
-    		document.body.style.backgroundColor="#D5CCBB"
+    	else if (x>100 && x<201 && y>599 && y<700){
+    		document.getElementById("row6column1").style.backgroundColor = "#"+ColorValue;
     	}
+		// Column 2 stuffs
+		else if (x>200 && x<301 && y>100 && y<200){
+    		document.getElementById("row1column2").style.backgroundColor = "#"+ColorValue;
+    	}
+    	else if (x>200 && x<301 && y>199 && y<300){    	
+    		document.getElementById("row2column2").style.backgroundColor = "#"+ColorValue;
+    	}
+    	else if (x>200 && x<301 && y>299 && y<400){
+    		document.getElementById("row3column2").style.backgroundColor = "#"+ColorValue;
+    	}
+   	 	else if (x>200 && x<301 && y>399 && y<500){
+			document.getElementById("row4column2").style.backgroundColor = "#"+ColorValue;
+    	}
+    	else if (x>200 && x<301 && y>499 && y<600){    	
+    		document.getElementById("row5column2").style.backgroundColor = "#"+ColorValue;
+    	}
+    	else if (x>200 && x<301 && y>599 && y<700){
+    		document.getElementById("row6column2").style.backgroundColor = "#"+ColorValue;
+    	}
+		// Column 3 stuffs
+		else if (x>300 && x<401 && y>100 && y<200){
+    		document.getElementById("row1column3").style.backgroundColor = "#"+ColorValue;
+    	}
+    	else if (x>300 && x<401 && y>199 && y<300){    	
+    		document.getElementById("row2column3").style.backgroundColor = "#"+ColorValue;
+    	}
+    	else if (x>300 && x<401 && y>299 && y<400){
+    		document.getElementById("row3column3").style.backgroundColor = "#"+ColorValue;
+    	}
+   	 	else if (x>300 && x<401 && y>399 && y<500){
+			document.getElementById("row4column3").style.backgroundColor = "#"+ColorValue;
+    	}
+    	else if (x>300 && x<401 && y>499 && y<600){    	
+    		document.getElementById("row5column3").style.backgroundColor = "#"+ColorValue;
+    	}
+    	else if (x>300 && x<401 && y>599 && y<700){
+    		document.getElementById("row6column3").style.backgroundColor = "#"+ColorValue;
+    	}
+
+
 	}
 </script>
+
+
+
 
 
 
@@ -71,16 +122,36 @@
 <body>
 
 <div class="container">
-  <div class="row1">
-    <div class="section1" id="row1column1" style="position: absolute; left: 100px; top: 100px; width: 100px; height: 100px; border:1px solid #000;"></div>
-    <div class="section2" id="row2column1" style="position: absolute; left: 100px; top: 199px; width: 100px; height: 100px; border:1px solid #000;"></div>
-
-
-    
+  <div class="firstColumn">
+    <div class="column1" id="row1column1" style="position: absolute; left: 100px; top: 100px; width: 101px; height: 100px; border:1px solid #000;"></div>
+    <div class="column1" id="row2column1" style="position: absolute; left: 100px; top: 199px; width: 101px; height: 101px; border:1px solid #000;"></div>
+    <div class="column1" id="row3column1" style="position: absolute; left: 100px; top: 299px; width: 101px; height: 101px; border:1px solid #000;"></div>
+    <div class="column1" id="row4column1" style="position: absolute; left: 100px; top: 399px; width: 101px; height: 101px; border:1px solid #000;"></div>
+    <div class="column1" id="row5column1" style="position: absolute; left: 100px; top: 499px; width: 101px; height: 101px; border:1px solid #000;"></div>
+  </div>
+  <div class="secondColumn">
+    <div class="column2" id="row1column2" style="position: absolute; left: 200px; top: 100px; width: 101px; height: 100px; border:1px solid #000;"></div>
+    <div class="column2" id="row2column2" style="position: absolute; left: 200px; top: 199px; width: 101px; height: 101px; border:1px solid #000;"></div>
+    <div class="column2" id="row3column2" style="position: absolute; left: 200px; top: 299px; width: 101px; height: 101px; border:1px solid #000;"></div>
+    <div class="column2" id="row4column2" style="position: absolute; left: 200px; top: 399px; width: 101px; height: 101px; border:1px solid #000;"></div>
+    <div class="column2" id="row5column2" style="position: absolute; left: 200px; top: 499px; width: 101px; height: 101px; border:1px solid #000;"></div>
+  </div>
+  <div class="thirdColumn">
+    <div class="column3" id="row1column3" style="position: absolute; left: 300px; top: 100px; width: 101px; height: 100px; border:1px solid #000;"></div>
+    <div class="column3" id="row2column3" style="position: absolute; left: 300px; top: 199px; width: 101px; height: 101px; border:1px solid #000;"></div>
+    <div class="column3" id="row3column3" style="position: absolute; left: 300px; top: 299px; width: 101px; height: 101px; border:1px solid #000;"></div>
+    <div class="column3" id="row4column3" style="position: absolute; left: 300px; top: 399px; width: 101px; height: 101px; border:1px solid #000;"></div>
+    <div class="column3" id="row5column3" style="position: absolute; left: 300px; top: 499px; width: 101px; height: 101px; border:1px solid #000;"></div>
   </div>
 
 
+
+
+
 </div>
+
+
+
 
 
 
