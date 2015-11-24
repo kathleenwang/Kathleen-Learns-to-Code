@@ -15,6 +15,7 @@ body{
 <head>
 <title>Basically a Dance Floor</title>
 <link href="./stylesheets/bootstrap.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
 
 
@@ -50,9 +51,20 @@ body{
 		// Column 1 stuffs
 		if (x>100 && x<201 && y>100 && y<200){
     		document.getElementById("row1column1").style.backgroundColor = "#"+ColorValue;
+    		$(document).ready(function(){
+    		$("#row1column1").mouseleave(function(){
+        		$("#row1column1").fadeOut(2000);
+    		});
+			});
+			document.getElementById("row1column1").style.backgroundColor = "#"+ColorValue;
     	}
     	else if (x>100 && x<201 && y>199 && y<300){    	
     		document.getElementById("row2column1").style.backgroundColor = "#"+ColorValue;
+    		 $(document).ready(function(){
+    		$("#row2column1").mouseleave(function(){
+        		$("#row2column1").fadeOut(2000);
+    		});
+			});
     	}
     	else if (x>100 && x<201 && y>299 && y<400){
     		document.getElementById("row3column1").style.backgroundColor = "#"+ColorValue;
@@ -108,10 +120,35 @@ body{
 
 	}
 </script>
+<!-- 
+
+<script>
+$(document).ready(function() {
+    setTimeout(function() {
+        $(".row1column1").fadeOut(1500);
+    }, 3000);
+
+    $('#btnReset').click(function() {
+        $(".row1column1").show();
+        setTimeout(function() {
+            $(".row1column1").fadeOut(1500);
+        }, 3000);
+    });
+});
+</script>
 
 
+ -->
 
-
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#div1").fadeOut();
+        $("#div2").fadeOut("slow");
+        $("#div3").fadeOut(3000);
+    });
+});
+</script>
 
 
 
@@ -149,11 +186,6 @@ body{
 
 
 </div>
-
-
-
-
-
 
 
 
