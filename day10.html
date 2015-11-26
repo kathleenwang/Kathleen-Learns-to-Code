@@ -34,6 +34,7 @@ if (today >= 6 && today < 7) {
 	}
 
 } 
+//7am
 else if (today >=7 && today < 8) {
     document.body.style.background = "lightBlue";
 	window.onload = generateSunball;
@@ -47,6 +48,7 @@ else if (today >=7 && today < 8) {
 		sunUp.style.height='200px';
 	}
 }
+//8-9am
 else if (today >=8 && today <=9) {
    	document.body.style.background = "lightBlue";
 	window.onload = generateSunball;
@@ -60,6 +62,7 @@ else if (today >=8 && today <=9) {
 		sunUp.style.height='200px';
 	}
 }
+//10-11am
 else if (today >=10 && today <=11) {
 	document.body.style.background = "lightBlue";
 	window.onload = generateSunball;
@@ -73,6 +76,7 @@ else if (today >=10 && today <=11) {
 		sunUp.style.height='200px';
 	}
 }
+//12pm NOON
 else if (today >=12 && today <13) {
 	document.body.style.background = "lightBlue";
 	window.onload = generateSunball;
@@ -86,6 +90,7 @@ else if (today >=12 && today <13) {
 		sunUp.style.height='200px';
 	}
 }
+//1-2pm
 else if (today >=13 && today <=14) {
 	document.body.style.background = "lightBlue";
 	window.onload = generateSunball;
@@ -99,6 +104,7 @@ else if (today >=13 && today <=14) {
 		sunUp.style.height='200px';
 	}
 }
+//3-4pm
 else if (today >=15 && today <=16) {
 	document.body.style.background = "lightBlue";
 	window.onload = generateSunball;
@@ -112,6 +118,7 @@ else if (today >=15 && today <=16) {
 		sunUp.style.height='200px';
 	}
 }
+//5pm
 else if (today >=17 && today <18) {
 	document.body.style.background = "lightBlue";
 	window.onload = generateSunball;
@@ -125,6 +132,7 @@ else if (today >=17 && today <18) {
 		sunUp.style.height='200px';
 	}
 }
+//6-7pm
 else if (today >=18 && today <=19) {
 	document.body.style.background = "lightBlue";
 	window.onload = generateSunball;
@@ -139,10 +147,8 @@ else if (today >=18 && today <=19) {
 	}
 }
 
-
-
 //moon 8pm
-else if(today >=21 && today <=22) {
+else if(today >=20 && today <21) {
    	document.body.style.background = "lightGrey";
 	window.onload = generateMoon;
 	function generateMoon() {
@@ -154,13 +160,121 @@ else if(today >=21 && today <=22) {
 		moonUp.style.width='200px';
 		moonUp.style.height='200px';
 	}
-
-
-
-
-
+}
+//9pm
+else if(today >=21 && today <22) {
+   	document.body.style.background = "LightGrey";
+	window.onload = generateMoon;
+	function generateMoon() {
+		var moonUp=document.getElementById("moonAppear");
+		moonUp.style.display='';
+		moonUp.style.position='absolute';
+		moonUp.style.top='330px';
+		moonUp.style.left='120px';
+		moonUp.style.width='200px';
+		moonUp.style.height='200px';
+	}
 }
 
+//10pm
+else if(today >=22 && today <23) {
+   	document.body.style.background = "Grey";
+	window.onload = generateMoon;
+	function generateMoon() {
+		var moonUp=document.getElementById("moonAppear");
+		moonUp.style.display='';
+		moonUp.style.position='absolute';
+		moonUp.style.top='180px';
+		moonUp.style.left='240px';
+		moonUp.style.width='200px';
+		moonUp.style.height='200px';
+	}
+}
+//11pm
+else if(today >=23 && today <0) {
+   	document.body.style.background = "lightGrey";
+	window.onload = generateMoon;
+	function generateMoon() {
+		var moonUp=document.getElementById("moonAppear");
+		moonUp.style.display='';
+		moonUp.style.position='absolute';
+		moonUp.style.top='90px';
+		moonUp.style.left='390px';
+		moonUp.style.width='200px';
+		moonUp.style.height='200px';
+	}
+}
+//12am MIDNIGHT
+else if(today >=0 && today <1) {
+   	document.body.style.background = "lightGrey";
+	window.onload = generateMoon;
+	function generateMoon() {
+		var moonUp=document.getElementById("moonAppear");
+		moonUp.style.display='';
+		moonUp.style.position='absolute';
+		moonUp.style.top='60px';
+		moonUp.style.left='540px';
+		moonUp.style.width='200px';
+		moonUp.style.height='200px';
+	}
+}
+//1-2am
+else if (today >=1 && today <=2) {
+	document.body.style.background = "lightGrey";
+	window.onload = generateMoon;
+	function generateMoon() {
+		var moonUp=document.getElementById("moonAppear");
+		moonUp.style.display='';
+		moonUp.style.position='absolute';
+		moonUp.style.top='90px';
+		moonUp.style.left='690px';
+		moonUp.style.width='200px';
+		moonUp.style.height='200px';
+	}
+}
+
+//3am
+else if (today >=3 && today <4) {
+	document.body.style.background = "lightGrey";
+	window.onload = generateMoon;
+	function generateMoon() {
+		var moonUp=document.getElementById("moonAppear");
+		moonUp.style.display='';
+		moonUp.style.position='absolute';
+		moonUp.style.top='180px';
+		moonUp.style.left='840px';
+		moonUp.style.width='200px';
+		moonUp.style.height='200px';
+	}
+}
+//4am
+else if (today >=4 && today <5) {
+	document.body.style.background = "lightGrey";
+	window.onload = generateMoon;
+	function generateMoon() {
+		var moonUp=document.getElementById("moonAppear");
+		moonUp.style.display='';
+		moonUp.style.position='absolute';
+		moonUp.style.top='330px';
+		moonUp.style.left='960px';
+		moonUp.style.width='200px';
+		moonUp.style.height='200px';
+	}
+}
+//5am
+else if (today >=5 && today <6) {
+	document.body.style.background = "lightGrey";
+	window.onload = generateMoon;
+	function generateMoon() {
+		var moonUp=document.getElementById("moonAppear");
+		moonUp.style.display='';
+		moonUp.style.position='absolute';
+		moonUp.style.top='480px';
+		moonUp.style.left='1070px';
+		moonUp.style.width='200px';
+		moonUp.style.height='200px';
+	}
+}
 
 </script>
 
@@ -183,7 +297,7 @@ document.getElementById("demo").innerHTML = Date();
 <!-- moon picture -->
 <div class "container">
     <div class "sunPicture">
-        <img alt="sunAppear" id="sunAppear" style="display: none" src="http://45.media.tumblr.com/3f5f409b11cd7c279be3aafdd1a633ed/tumblr_nyej4yGOWu1qh6v2wo1_540.gif"/>
+        <img alt="moonAppear" id="moonAppear" style="display: none" src="http://45.media.tumblr.com/3f5f409b11cd7c279be3aafdd1a633ed/tumblr_nyej4yGOWu1qh6v2wo1_540.gif"/>
     </div>
 </div>
 </body>
