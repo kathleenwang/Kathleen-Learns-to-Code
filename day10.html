@@ -9,31 +9,129 @@
 </style>
 
 <head>
+<!--
+<script>
+// //break each half day into 5 segments. noon has sun at top. midnight has moon at top
+// var today = new Date().getHours();
+//   document.onclick = userClicked; //window.onclick doesnt work with IE so use document.onclick
+//   function userClicked(event) {
+//     var x = event.clientX;
+//     var y = event.clientY;
+// //sunrise 6am
+// if (today >= 6 && today <= 8) {
+//    document.body.style.background = "Red";
+//   function userClicked(event) {
+//     var x = event.clientX;
+//     var y = event.clientY;
+//     var sunrise = document.getElementById("sunAppear");
+//     sunrise.style.display = '';
+//         sunrise.style.position = 'absolute';
+//         sunrise.style.left = x + 'px';
+//         sunrise.style.top = y + 'px';
+
+// } 
+// else if (today >=9 && today <=11) {
+//     document.body.style.background = "Blue";
+// }
+// else if (today >=12 && today <=13) {
+
+// }
+// else if (today >=14 && today <=16) {
+
+// }
+// else if (today >=17 && today <=20) {
+//     // var snowball = document.getElementById("snowballAppear");
+//     // snowball.style.display = '';
+//     //     snowball.style.position = 'absolute';
+//     //     snowball.style.left = x + 'px';
+//     //     snowball.style.top = y + 'px';
+//     // }
+// document.body.style.background = "Blue";
+// }
+
+// //moon
+// else if(today >=21 && today <=22) {
+
+// }
+
+
+
+
+
+
+// </script>
+
+-->
 
 </head>
 
 
 <body>
+
+
 <script>
-  // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  // })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  // ga('create', 'UA-70297117-1', 'auto');
-  // ga('send', 'pageview');
-
-
+//break each half day into 5 segments. noon has sun at top. midnight has moon at top
 var today = new Date().getHours();
-if (today >= 7 && today <= 19) {
+//sunrise 6am
+if (today >= 6 && today <= 8) {
    document.body.style.background = "Red";
-} else {
+  // function userClicked(event) {
+  //   var x = event.clientX;
+  //   var y = event.clientY;
+  //   var sunrise = document.getElementById("sunAppear");
+  //   sunrise.style.display = '';
+  //       sunrise.style.position = 'absolute';
+  //       sunrise.style.left = x + 'px';
+  //       sunrise.style.top = y + 'px';}
+
+} 
+else if (today >=9 && today <=11) {
     document.body.style.background = "Blue";
+}
+else if (today >=12 && today <=13) {
+
+}
+else if (today >=14 && today <=16) {
+
+}
+else if (today >=17 && today <=20) {
+  // document.onclick = userClicked; //window.onclick doesnt work with IE so use document.onclick
+  // function userClicked(event) {
+  //   var x = event.clientX;
+  //   var y = event.clientY;
+  //   var snowball = document.getElementById("snowballAppear");
+  //   snowball.style.display = '';
+  //       snowball.style.position = 'absolute';
+  //       snowball.style.left = x + 'px';
+  //       snowball.style.top = y + 'px';
+  //   }
+document.body.style.background = "green";
+	window.onload = generateSnowball;
+	
+	function generateSnowball() {
+		var sunUp=document.getElementById("sunAppear");
+		sunUp.style.display='';
+		sunUp.style.position='absolute';
+		sunUp.style.top='100px';
+		sunUp.style.left='100px';
+		sunUp.style.width='100px';
+		sunUp.style.height='100px';
+
+	}
+
+
+}
+
+//moon
+else if(today >=21 && today <=22) {
+
 }
 
 
 </script>
-<p id="demo"></p>
+
+
+ <p id="demo"></p>
 
 
 
@@ -41,6 +139,11 @@ if (today >= 7 && today <= 19) {
 document.getElementById("demo").innerHTML = Date();
 </script>
 
-
+<!-- sun picture -->
+<div class "container">
+    <div class "sunPicture">
+        <img alt="sunAppear" id="sunAppear" style="display: none" src="https://40.media.tumblr.com/e287ddbeebcb90c78e393e121c3456b3/tumblr_nyef2o0yBn1um4105o1_1280.png"/>
+    </div>
+</div>
 </body>
 </html>
