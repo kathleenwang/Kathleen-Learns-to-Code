@@ -1,0 +1,46 @@
+<!Doctype html>
+<html>
+<style>
+/*Sun: https://40.media.tumblr.com/e287ddbeebcb90c78e393e121c3456b3/tumblr_nyef2o0yBn1um4105o1_1280.png*/
+
+/*Moon: https://40.media.tumblr.com/8ebc2691ad109acbf0a66ee5f32a2614/tumblr_nyef2o0yBn1um4105o2_540.png*/
+
+
+</style>
+
+<head>
+
+</head>
+
+
+<body>
+<script>
+  // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  // })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  // ga('create', 'UA-70297117-1', 'auto');
+  // ga('send', 'pageview');
+
+
+var today = new Date().getHours();
+if (today >= 7 && today <= 19) {
+   document.body.style.background = "Red";
+} else {
+    document.body.style.background = "Blue";
+}
+
+
+</script>
+<p id="demo"></p>
+
+
+
+<script>
+document.getElementById("demo").innerHTML = Date();
+</script>
+
+
+</body>
+</html>
