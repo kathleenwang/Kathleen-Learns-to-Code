@@ -1,6 +1,35 @@
 <!doctype html>
 <html>
 <style>
+#directions{	
+	display: block;
+	font-size: 50px;
+	width: 610px;
+	margin:0px auto;
+	color: white;
+	/*margin-top: 100px;*/
+
+}
+#cookie{
+	display: block;
+	width: 300px;
+	/*margin-top: 100px;*/
+	margin: 0px auto;
+}
+
+#fortune{
+	display:block;
+	font-size: 45px;
+	margin: 0px auto;
+	width: 1000px;
+	margin-top: 100px;
+	color: white;
+	text-align: center;
+}
+body{
+	background-color: pink;
+}
+
 </style>
 
 <head>
@@ -11,11 +40,14 @@
 
 
 <body>
-<button onclick="myFunction()">Try it</button>
-
+<p id="directions">Click the cookie for a fortune!</p>
+<img id="cookie" onClick="myFunction();" src="https://upload.wikimedia.org/wikipedia/commons/2/24/Fortune_cookie.png" />
 <p id="fortune"></p>
 
-<!-- <p id="myText"></p> -->
+
+
+
+
 <script>
 	function myFunction() {
     // var x = document.getElementById("demo")
