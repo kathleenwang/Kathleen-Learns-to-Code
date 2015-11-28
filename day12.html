@@ -1,0 +1,44 @@
+<!Doctype html>
+<html>
+<style type="text/css">
+	
+
+</style>
+
+
+<head>
+<title>Dose of Happiness (^_^)</title>
+</head>
+
+
+<h1>Pick one!</h1>
+<ul>
+	<li id="puppy" onclick="getDoggie()">Puppy</li>
+	<li id="kitty" onclick="getKitty()">Kitty</li>
+
+</ul>
+
+<script>
+function getDoggie() {
+    document.getElementById("iframeDoggie").style.display="inline";
+    document.getElementById('iframeDoggie').style.display='';
+}
+</script>
+<script>
+function getKitty() {
+    document.getElementById("iframeKitty").style.display="inline";
+}
+</script>
+
+
+<!-- Corgi video -->
+<iframe id="iframeDoggie" width="420" height="315" src="https://www.youtube.com/embed/DFVAylcYrQY" frameborder="0" allowfullscreen style="display: none; "></iframe>
+
+<!-- Kitty video -->
+<iframe id="iframeKitty" width="420" height="315" src="https://www.youtube.com/embed/LNWjZcbv2uI" frameborder="0" allowfullscreen style="display: none;"></iframe>
+
+
+</body>
+
+
+</html>
