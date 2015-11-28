@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+
+<head>
+
+<script>
+var looper;
+var degrees = 0;
+function rotateAnimation(el,speed){
+  var elem = document.getElementById(el);
+  if(navigator.userAgent.match("Chrome")){
+    elem.style.WebkitTransform = "rotate("+degrees+"deg)";
+  } else if(navigator.userAgent.match("Firefox")){
+    elem.style.MozTransform = "rotate("+degrees+"deg)";
+  } else if(navigator.userAgent.match("MSIE")){
+    elem.style.msTransform = "rotate("+degrees+"deg)";
+  } else if(navigator.userAgent.match("Opera")){
+    elem.style.OTransform = "rotate("+degrees+"deg)";
+  } else {
+    elem.style.transform = "rotate("+degrees+"deg)";
+  }
+  looper = setTimeout('rotateAnimation(\''+el+'\','+speed+')',speed);
+  degrees++;
+  if(degrees > 359){
+    degrees = 1;
+  }
+  document.getElementById("status").innerHTML = "rotate("+degrees+"deg)";
+}
+</script>
+</head>
+<body>
+<img id="arrow" src="http://www.clker.com/cliparts/L/X/7/n/H/j/transparent-arrow-hi.png" style=" width: 100px;"alt="arrow">
+<script>rotateAnimation("arrow",30);</script>
+<h2 style="width:200px;" id="status"></h2>
+</body>
+
+</html>
