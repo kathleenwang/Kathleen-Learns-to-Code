@@ -1,7 +1,9 @@
 <!Doctype html>
 <html>
 <style type="text/css">
+iframe{
 	
+}	
 
 </style>
 
@@ -21,12 +23,13 @@
 <script>
 function getDoggie() {
     document.getElementById("iframeDoggie").style.display="inline";
-    document.getElementById('iframeDoggie').style.display='';
+    document.getElementById('iframeKitty').style.display='none';
 }
 </script>
 <script>
 function getKitty() {
     document.getElementById("iframeKitty").style.display="inline";
+   document.getElementById("iframeDoggie").style.display="none";
 }
 </script>
 
@@ -35,8 +38,7 @@ function getKitty() {
 <iframe id="iframeDoggie" width="420" height="315" src="https://www.youtube.com/embed/DFVAylcYrQY" frameborder="0" allowfullscreen style="display: none; "></iframe>
 
 <!-- Kitty video -->
-<iframe id="iframeKitty" width="420" height="315" src="https://www.youtube.com/embed/LNWjZcbv2uI" frameborder="0" allowfullscreen style="display: none;"></iframe>
-
+<iframe id="iframeKitty" width="420" height="315" src="https://www.youtube.com/embed/0Bmhjf0rKe8" frameborder="0" allowfullscreen style="display: none;"></iframe>
 
 </body>
 
