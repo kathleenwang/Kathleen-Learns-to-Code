@@ -1,45 +1,74 @@
 <!Doctype html>
 <html>
 <style type="text/css">
-iframe{
+
+
+#directions{
+	display: block;
+	font-size: 50px;
+	width: 430px;
+	margin:0px auto;
 	
-}	
+}
+
+#puppy{
+	font-size: 40px;
+}
+#kitty{
+	font-size: 40px;
+}
+#turtle{
+	font-size: 40px;
+}
+body{
+	background-color: pink;
+}
 
 </style>
 
 
 <head>
-<title>Dose of Happiness (^_^)</title>
+<title>Small Dose of Happiness (^_^)</title>
 </head>
 
 
-<h1>Pick one!</h1>
-<ul>
-	<li id="puppy" onclick="getDoggie()">Puppy</li>
-	<li id="kitty" onclick="getKitty()">Kitty</li>
+<h1 id="directions">Pick one! Click one!</h1>
+<p id="puppy" onclick="getDoggie()">Puppy</p>
+<p id="kitty" onclick="getKitty()">Kitty</p>
+<p id="turtle" onclick="getTurtle()">Turtle</p>
 
-</ul>
+
 
 <script>
 function getDoggie() {
     document.getElementById("iframeDoggie").style.display="inline";
     document.getElementById('iframeKitty').style.display='none';
+    document.getElementById("iframeTurtle").style.display="none";
 }
 </script>
 <script>
 function getKitty() {
     document.getElementById("iframeKitty").style.display="inline";
-   document.getElementById("iframeDoggie").style.display="none";
+    document.getElementById("iframeDoggie").style.display="none";
+    document.getElementById("iframeTurtle").style.display="none";
+}
+</script>
+<script>
+function getTurtle() {
+    document.getElementById("iframeTurtle").style.display="inline";
+   	document.getElementById("iframeDoggie").style.display="none";
+   	document.getElementById("iframeKitty").style.display="none";
 }
 </script>
 
-
 <!-- Corgi video -->
-<iframe id="iframeDoggie" width="420" height="315" src="https://www.youtube.com/embed/DFVAylcYrQY" frameborder="0" allowfullscreen style="display: none; "></iframe>
+<iframe id="iframeDoggie" width="420" height="315" src="https://www.youtube.com/embed/DFVAylcYrQY" frameborder="0" allowfullscreen style="display: none;" align="right"></iframe>
 
 <!-- Kitty video -->
-<iframe id="iframeKitty" width="420" height="315" src="https://www.youtube.com/embed/0Bmhjf0rKe8" frameborder="0" allowfullscreen style="display: none;"></iframe>
+<iframe id="iframeKitty" width="420" height="315" src="https://www.youtube.com/embed/0Bmhjf0rKe8" frameborder="0" allowfullscreen style="display: none;" align="right"></iframe>
 
+<!-- Turtle video -->
+<iframe id="iframeTurtle" width="420" height="315" src="https://www.youtube.com/embed/UnX7ypqAbG8" frameborder="0" allowfullscreen style="display:none;" align="right"></iframe>
 </body>
 
 
