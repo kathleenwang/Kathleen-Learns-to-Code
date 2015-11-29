@@ -1,8 +1,26 @@
 <!doctype html>
 <html>
+<style>
+#arrow{
+	position: relative;
+	display: block;
+	width: 100px;
+	top: 235px;
+	margin: 0px auto;
 
+}
+
+#image1{
+	position: relative;
+	display: block;
+	width: 100px;
+	top: 100px;
+	margin: 0px auto;
+}
+
+</style>
 <head>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>
 var looper;
 var degrees = 0;
@@ -25,13 +43,44 @@ function rotateAnimation(el,speed){
     degrees = 1;
   }
   document.getElementById("status").innerHTML = "rotate("+degrees+"deg)";
+  
+
+
+// TOP (12oclock)
+	if (degrees >= 270 && degrees <=275) {
+
+		document.getElementsByTagName("body")[0].style.backgroundColor = "blue";
+
+		// class="shakeimage" onMouseover="init(this);rattleimage()" onMouseout="stoprattle(this);top.focus()" onClick="top.focus()"
+	}
+
+
+
+  
+
+
+
+  		
+
+
+
+
 }
 </script>
 </head>
 <body>
-<img id="arrow" src="http://www.clker.com/cliparts/L/X/7/n/H/j/transparent-arrow-hi.png" style=" width: 100px;"alt="arrow">
-<script>rotateAnimation("arrow",30);</script>
-<h2 style="width:200px;" id="status"></h2>
-</body>
+<!-- image1 -->
+<img id="image1" src="http://www.howtodrawguide.com/wp-content/uploads/image/how-to-draw-cartoons/how-to-draw-a-star/stea.jpg" alt="image1">
 
+
+<!-- arrow -->
+<img id="arrow" src="http://www.clker.com/cliparts/L/X/7/n/H/j/transparent-arrow-hi.png" alt="arrow">
+<script>rotateAnimation("arrow",10);</script>
+<h2 style="width:200px;" id="status"></h2>
+
+
+
+
+
+</body>
 </html>
