@@ -5,7 +5,7 @@
 	position: relative;
 	display: block;
 	width: 100px;
-	top: 235px;
+	top: 230px;
 	margin: 0px auto;
 
 }
@@ -20,6 +20,7 @@
 
 </style>
 <head>
+<title>May Cause Seizures?</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>
 var looper;
@@ -47,35 +48,117 @@ function rotateAnimation(el,speed){
 
 
 // TOP (12oclock)
-	if (degrees >= 270 && degrees <=275) {
-
-		document.getElementsByTagName("body")[0].style.backgroundColor = "blue";
-
+	if (degrees >= 260 && degrees <=280) {
+		document.getElementsByTagName("body")[0].style.backgroundColor = "skyblue";
 		// class="shakeimage" onMouseover="init(this);rattleimage()" onMouseout="stoprattle(this);top.focus()" onClick="top.focus()"
 	}
 
-
-
-  
-
-
-
-  		
-
-
-
-
+	else if (degrees >280 && degrees <=300) {
+		document.getElementsByTagName("body")[0].style.backgroundColor = "pink";
+		// class="shakeimage" onMouseover="init(this);rattleimage()" onMouseout="stoprattle(this);top.focus()" onClick="top.focus()"
+	}
+	else if (degrees >300 && degrees <=320) {
+		document.getElementsByTagName("body")[0].style.backgroundColor = "lightyellow";
+		// class="shakeimage" onMouseover="init(this);rattleimage()" onMouseout="stoprattle(this);top.focus()" onClick="top.focus()"
+	}
+	else if (degrees >320 && degrees <=340) {
+		document.getElementsByTagName("body")[0].style.backgroundColor = "lightgreen";
+		// class="shakeimage" onMouseover="init(this);rattleimage()" onMouseout="stoprattle(this);top.focus()" onClick="top.focus()"
+	}
+	else if (degrees >340 && degrees <=360) {
+		document.getElementsByTagName("body")[0].style.backgroundColor = "skyblue";
+		// class="shakeimage" onMouseover="init(this);rattleimage()" onMouseout="stoprattle(this);top.focus()" onClick="top.focus()"
+	}
+	else if (degrees >0 && degrees <=20) {
+		document.getElementsByTagName("body")[0].style.backgroundColor = "pink";
+		// class="shakeimage" onMouseover="init(this);rattleimage()" onMouseout="stoprattle(this);top.focus()" onClick="top.focus()"
+	}
+	else if (degrees >20 && degrees <=40) {
+		document.getElementsByTagName("body")[0].style.backgroundColor = "lightyellow";
+		// class="shakeimage" onMouseover="init(this);rattleimage()" onMouseout="stoprattle(this);top.focus()" onClick="top.focus()"
+	}
+ 	else if (degrees >40 && degrees <=60) {
+		document.getElementsByTagName("body")[0].style.backgroundColor = "lightgreen";
+		// class="shakeimage" onMouseover="init(this);rattleimage()" onMouseout="stoprattle(this);top.focus()" onClick="top.focus()"
+	}
+	else if (degrees >60 && degrees <=80) {
+		document.getElementsByTagName("body")[0].style.backgroundColor = "skyblue";
+		// class="shakeimage" onMouseover="init(this);rattleimage()" onMouseout="stoprattle(this);top.focus()" onClick="top.focus()"
+	}
+	else if (degrees >80 && degrees <=100) {
+		document.getElementsByTagName("body")[0].style.backgroundColor = "pink";
+		// class="shakeimage" onMouseover="init(this);rattleimage()" onMouseout="stoprattle(this);top.focus()" onClick="top.focus()"
+	} 
+	else if (degrees >100 && degrees <=120) {
+		document.getElementsByTagName("body")[0].style.backgroundColor = "lightyellow";
+		// class="shakeimage" onMouseover="init(this);rattleimage()" onMouseout="stoprattle(this);top.focus()" onClick="top.focus()"
+	}
+ 	else if (degrees >120 && degrees <=140) {
+		document.getElementsByTagName("body")[0].style.backgroundColor = "lightgreen";
+		// class="shakeimage" onMouseover="init(this);rattleimage()" onMouseout="stoprattle(this);top.focus()" onClick="top.focus()"
+	}
+	else if (degrees >140 && degrees <=160) {
+		document.getElementsByTagName("body")[0].style.backgroundColor = "skyblue";
+		// class="shakeimage" onMouseover="init(this);rattleimage()" onMouseout="stoprattle(this);top.focus()" onClick="top.focus()"
+	}
+	else if (degrees >160 && degrees <=180) {
+		document.getElementsByTagName("body")[0].style.backgroundColor = "pink";
+		// class="shakeimage" onMouseover="init(this);rattleimage()" onMouseout="stoprattle(this);top.focus()" onClick="top.focus()"
+	} 
+	else if (degrees >180 && degrees <=200) {
+		document.getElementsByTagName("body")[0].style.backgroundColor = "lightyellow";
+		// class="shakeimage" onMouseover="init(this);rattleimage()" onMouseout="stoprattle(this);top.focus()" onClick="top.focus()"
+	}
+ 	else if (degrees >200 && degrees <=220) {
+		document.getElementsByTagName("body")[0].style.backgroundColor = "lightgreen";
+		// class="shakeimage" onMouseover="init(this);rattleimage()" onMouseout="stoprattle(this);top.focus()" onClick="top.focus()"
+	}
+	else if (degrees >220 && degrees <=240) {
+		document.getElementsByTagName("body")[0].style.backgroundColor = "skyblue";
+		// class="shakeimage" onMouseover="init(this);rattleimage()" onMouseout="stoprattle(this);top.focus()" onClick="top.focus()"
+	}
+	else if (degrees >240 && degrees <=260) {
+		document.getElementsByTagName("body")[0].style.backgroundColor = "pink";
+		// class="shakeimage" onMouseover="init(this);rattleimage()" onMouseout="stoprattle(this);top.focus()" onClick="top.focus()"
+	} 
 }
+</script>
+
+<script>
+$(document).ready(function () {
+	var animations = [ 'shake',
+					   'hop',
+					   'spin',
+					   'grow',
+					   'hooray' ];
+
+	function getRandomInt (min, max) {
+		return Math.floor(Math.random() * (max - min + 1)) + min;
+	}
+
+	$('.sushi_box').on ('click', function () {
+		var sushi = this;
+		var animation = animations[getRandomInt(0, 4)];
+
+		$(sushi).addClass(animation);
+
+		setTimeout(function () {
+			$(sushi).removeClass(animation);
+		}, 2100);
+	});
+
+
+});
+
 </script>
 </head>
 <body>
 <!-- image1 -->
 <img id="image1" src="http://www.howtodrawguide.com/wp-content/uploads/image/how-to-draw-cartoons/how-to-draw-a-star/stea.jpg" alt="image1">
 
-
 <!-- arrow -->
 <img id="arrow" src="http://www.clker.com/cliparts/L/X/7/n/H/j/transparent-arrow-hi.png" alt="arrow">
-<script>rotateAnimation("arrow",10);</script>
+<script>rotateAnimation("arrow",20);</script>
 <h2 style="width:200px;" id="status"></h2>
 
 
