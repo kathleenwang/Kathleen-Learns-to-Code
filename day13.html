@@ -5,22 +5,22 @@
 	position: relative;
 	display: block;
 	width: 100px;
-	top: 230px;
+	top: 243px;
 	margin: 0px auto;
 
 }
 
-#image1{
+/*#container{
 	position: relative;
 	display: block;
 	width: 100px;
 	top: 100px;
 	margin: 0px auto;
-}
+}*/
 
 </style>
 <head>
-<title>May Cause Seizures?</title>
+<title>Spinning Arrow</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>
 var looper;
@@ -43,7 +43,7 @@ function rotateAnimation(el,speed){
   if(degrees > 359){
     degrees = 1;
   }
-  document.getElementById("status").innerHTML = "rotate("+degrees+"deg)";
+  // document.getElementById("status").innerHTML = "rotate("+degrees+"deg)";
   
 
 
@@ -124,45 +124,22 @@ function rotateAnimation(el,speed){
 }
 </script>
 
-<script>
-$(document).ready(function () {
-	var animations = [ 'shake',
-					   'hop',
-					   'spin',
-					   'grow',
-					   'hooray' ];
-
-	function getRandomInt (min, max) {
-		return Math.floor(Math.random() * (max - min + 1)) + min;
-	}
-
-	$('.sushi_box').on ('click', function () {
-		var sushi = this;
-		var animation = animations[getRandomInt(0, 4)];
-
-		$(sushi).addClass(animation);
-
-		setTimeout(function () {
-			$(sushi).removeClass(animation);
-		}, 2100);
-	});
-
-
-});
-
-</script>
 </head>
 <body>
-<!-- image1 -->
-<img id="image1" src="http://www.howtodrawguide.com/wp-content/uploads/image/how-to-draw-cartoons/how-to-draw-a-star/stea.jpg" alt="image1">
-
-<!-- arrow -->
 <img id="arrow" src="http://www.clker.com/cliparts/L/X/7/n/H/j/transparent-arrow-hi.png" alt="arrow">
 <script>rotateAnimation("arrow",20);</script>
 <h2 style="width:200px;" id="status"></h2>
 
+<!-- <div id="wrap">
+	<div id="container">
+		<div class="images" id="image1">
+			<img src="http://www.howtodrawguide.com/wp-content/uploads/image/how-to-draw-cartoons/how-to-draw-a-star/stea.jpg" alt="image1">
+		</div>
 
 
+	</div>
+</div> 
+-->
 
 
 </body>
